@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin: 40px 0 24px;
+  font: bold 24px "Noto Sans", sans-serif;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.profile {
+  background: #ffb0b0;
+  border-radius: 14px;
+  padding: 24px;
+  display: flex;
+}
+
+#profile-id {
+  text-align: center;
+  font: bold 14px/30px "Noto Sans", sans-serif;
+  background: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+.img-container {
+  margin-right: 24px;
+}
+
+.img-rounded {
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+#profile-img {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-container {
+  flex: 1;
+}
+
+#profile-name {
+  font: bold 20px "Noto Sans", sans-serif;
+  margin-bottom: 4px;
+}
+
+#profile-job {
+  font: bold 14px "Noto Sans", sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+#profile-note {
+  font: 14px "Noto Sans", sans-serif;
+  height: 60px;
+}
+
+.controls {
+  display: flex;
+  margin: 24px 0 0;
+}
+
+.controls button {
+  flex: 1;
+  margin: 0 24px;
+  font: bold 14px "Noto Sans", sans-serif;
+  background: none;
+  padding: 12px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  outline: none;
+  width: 50px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #ccc;
+}
