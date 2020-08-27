@@ -50,5 +50,45 @@ const profiles = [
 ];
 
 window.addEventListener("DOMContentLoaded", function () {
-  // Comece por aqui!
+  const profileID = document.getElementById("profile-id");
+  const profileName = document.getElementById("profile-name");
+  const profileJob = document.getElementById("profile-job");
+  const profileNote = document.getElementById("profile-note");
+  const profileImg = document.getElementById("profile-img");
+
+  const buttonNext = document.querySelector(".button-next");
+  const buttonPrev = document.querySelector(".button-prev");
+  const buttonRandom = document.querySelector(".button-random");
+
+  let currentProfile = 0;
+  showProfile();
+
+  buttonNext.addEventListener("click", function () {
+    currentProfile++;
+    if (currentProfile == 6) {
+      currentProfile = 0;
+    }
+    showProfile();
+  });
+
+  buttonPrev.addEventListener("click", function () {
+    currentProfile--;
+    if (currentProfile == -1) {
+      currentProfile = 5;
+    }
+    showProfile();
+  });
+
+  buttonRandom.addEventListener("click", function () {
+    currentProfile = Math.floor(Math.random() * 6 );
+    showProfile();
+  });
+
+  function showProfile() {
+    profileID.textContent = profiles[currentProfile].id;
+    profileName.textContent = profiles[currentProfile].name;
+    profileJob.textContent = profiles[currentProfile].job;
+    profileNote.textContent = profiles[currentProfile].note;
+    profileImg.src = profiles[currentProfile].img;
+  }
 });
